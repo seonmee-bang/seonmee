@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./asset/js/dropdown.js"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+  <link rel="stylesheet" href="./asset/css/reset.css">
+  <link rel="stylesheet" href="./asset/css/common.css">
+  <link rel="stylesheet" href="./asset/css/table.css">
+  <link rel="stylesheet" href="./asset/css/input.css">
+  <title>Document</title>
+  <style>
+    header { height:100vh; background:linear-gradient(rgba(0,20,50,0.5),rgba(0,20,50,0.5)),url(asset/images/AQ199.JPG); background-size:cover; }
+    nav { position:fixed; width:100%; line-heiht:80px; transition:0.5s;}
+    nav.black {top:-0;background:black; }
+    header nav ul {float:right; margin:0 30px 0 0 ;}
+    header nav ul li a {color:#fff; display:inline-block; height:80px; line-height:80px; }
+    header nav ul li {float:left; margin-right:20px;}
+
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="#">menu text</a></li>
+      <li><a href="#">menu text</a></li>
+      <li><a href="#">menu text</a></li>
+      <li><a href="#">menu text</a></li>
+      <li><a href="#">menu text</a></li>
+      <li><a href="#">menu text</a></li>
+    </ul>
+  </nav>
+</header>
+<section>
+  asdfsdfasf</br>asdfsdfasf</br>asdfsdfasf</br>asdfsdfasf</br>asdfsdfasf</br>asdfsdfasf</br>asdfsdfasf</br>
+</section>
+
+<script>
+  $(window).on("scroll", function() {
+    if($(window).scrollTop()) {
+      $('nav').addClass('black');
+}
+    else {
+      $('nav').removeClass('black');
+    }
+    })
+</script>
+</body>
+</html>

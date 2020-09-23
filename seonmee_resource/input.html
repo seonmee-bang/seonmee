@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>  
+  <script type="text/javascript" src="./asset/js/dropdown.js"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+  <link rel="stylesheet" href="./asset/css/reset.css">
+  <link rel="stylesheet" href="./asset/css/common.css">
+  <link rel="stylesheet" href="./asset/css/table.css">
+  <link rel="stylesheet" href="./asset/css/input.css">
+  <title>Document</title>
+</head>
+<body>
+<!-- 테이블 타입3 -->
+<ul class="portfolio">
+  <li>
+    <input type="text" placeholder="아이디를 입력하세요">
+    <input class="req" type="text" placeholder="아이디를 입력하세요">
+    <input type="text" disabled placeholder="아이디를 입력하세요">
+    <input type="text" readonly class="readonly" placeholder="아이디를 입력하세요" >
+  </li>
+  <li>
+    <div class="input_search" >
+      <span></span>
+      <input type="text" placeholder="검색어를 입력하세요" >
+      <button>검색</button>
+    </div>
+  </li>
+  <li>
+    <input type="radio" id="name1" name="name1" value="yyy" checked="checked" class="check"><label for="name1">선택1</label>
+    <input type="radio" id="name2"><label for="name2">선택1</label>
+    <input type="checkbox" id="name3" checked="checked"><label for="name3">선택1</label>
+    <input type="checkbox" id="name4"><label for="name4">선택1</label>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider"></span>
+    </label>
+    <div class="selectbox" style="width:200px;">
+      <select>
+        <option value="0">Select car:</option>
+        <option value="1">Audi</option>
+        <option value="2">BMW</option>
+        <option value="3">Citroen</option>
+        <option value="4">Ford</option>
+        <option value="5">Honda</option>
+        <option value="6">Jaguar</option>
+        <option value="7">Land Rover</option>
+        <option value="8">Mercedes</option>
+        <option value="9">Mini</option>
+        <option value="10">Nissan</option>
+        <option value="11">Toyota</option>
+        <option value="12">Volvo</option>
+      </select>
+    </div>
+  </li>
+  <li>
+    <div class="container mr20" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <div class="hamberger" >
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+  </li>
+  <li>
+    <form action="/action_page.php">
+      <input type="file" id="myFile" name="filename">
+      <input type="submit">
+    </form>
+  </li>
+  <li>
+    <div class="accordion_box">
+      <button class="accordion tal">Section 1</button>
+      <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur </br>adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+
+      <button class="accordion tal">Section 2</button>
+      <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+
+      <button class="accordion tal">Section 3</button>
+      <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="faq_list">
+			<ul id="accordion">
+				<li>
+					<div class="question active">
+						<i class="ico_q">Q</i>
+						2020년 채용정보를 알고 싶습니다.
+					</div>
+					<div class="answer">
+						<p>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</p>
+					</div>
+				</li>
+				<li>
+					<div class="question">
+						<i class="ico_q">Q</i>
+						2020년 채용정보를 알고 싶습니다.
+					</div>
+					<div class="answer">
+						<p>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</p>
+					</div>
+				</li>
+        <li>
+					<div class="question">
+						<i class="ico_q">Q</i>
+						2020년 채용정보를 알고 싶습니다.
+					</div>
+					<div class="answer">
+						<p>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</p>
+					</div>
+				</li>
+			</ul>
+
+		</div>
+  </li>
+  <li class="flex">
+    <div class="img_overlay_type1">
+      <img src="asset/images/AQ199.JPG" alt="">
+      <p class="overlay"><span>안녕하세요</span></p>
+    </div>
+    <div class="img_overlay_type1">
+      <img src="asset/images/AQ199.JPG" alt="">
+      <p class="overlay"><span>안녕하세요</span></p>
+    </div>
+    <div class="img_overlay_type1">
+      <img src="asset/images/AQ199.JPG" alt="">
+      <p class="overlay"><span>안녕하세요</br>hellow world</span></p>
+    </div>
+    <div class="img_overlay_type1">
+      <img src="asset/images/AQ199.JPG" alt="">
+      <p class="overlay"><span>안녕하세요</span></p>
+    </div>
+  </li>
+  <li></li>
+</ul>
+<div class="quick_menu">
+  <ul>
+    <li><a href=""><span class="img1"></span><span class="img1_over"></span></a></li>
+    <li><a href=""><span class="img2"></span><span class="img2_over"></span></a></li>
+    <li><a href=""><span class="img3"></span><span class="img3_over"></span></a></li>
+    <li class="hover_none"><a href="" class="orange"><span class="img4"></span></a></li>
+    <li><a href=""><span class="img5"></span><span class="img5_over"></span></a></li>
+    <li><a href=""><span class="img6"></span><span class="img6_over"></span></a></li>
+  </ul>
+</div>
+
+<script type="text/javascript" src="./asset/js/selectbox.js"></script>
+<script type="text/javascript" src="./asset/js/accordion.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+
+<!-- 햄버거메뉴 클릭 -->
+<script>
+$( function() {
+  $(".question").on("click",function(){
+    $(this).toggleClass("active");
+  });
+} );
+
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+</script>
+</body>
+</html>

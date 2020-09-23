@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+.layout1 {height:100%; width:100%; border:1px solid red; box-sizing: border-box;}
+.layout1 header {height:100px; margin:10px; border:1px solid #aaa; background:#eee; box-sizing: border-box; }
+.layout1 main {display: flex; height:calc(100% - 190px); margin:10px; padding:10px; border:1px solid #aaa; background:#eee; box-sizing: border-box;}
+.layout1 main > aside {height:100%; width:300px; margin-right:10px; border:1px solid #aaa; background:#fff; }
+.layout1 main > section {flex:1; border:1px solid #aaa; }
+.layout1 footer {height:50px; margin:10px; border:1px solid #aaa; background:#eee; box-sizing: border-box;}

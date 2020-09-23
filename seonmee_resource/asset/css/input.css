@@ -1,0 +1,119 @@
+@charset "UTF-8";
+input {border:1px solid #ccc; padding:0 10px ; border-radius: 3px; height:30px; box-sizing: border-box;}
+input[class*="req"] {border:1px solid red;}
+input:disabled {border:1px solid #ccc; background:#f4f4f4}
+input:read-only {border:1px solid #ccc; background:#f4f4f4;}
+input::-webkit-input-placeholder {color:#ccc;}
+input[class*="req"]::-webkit-input-placeholder {color:#ff6b6b}
+input:disabled::-webkit-input-placeholder {color:#aaa;}/* ie 지원안함 */
+input:read-only::-webkit-input-placeholder {color:#aaa;} /* ie 지원안함 */
+input[class*="readonly"] {border:1px solid #ccc; background:#f4f4f4;}
+.input_search {display: flex; position: relative; font-size:0; }
+.input_search span {position: absolute; left:5px; top:5px; width:20px; height: 20px; background:#dddddd;}
+.input_search input {flex:1; padding-left:30px; border-radius:3px 0 0 3px; }
+.input_search button {width:50px; height: 20px;  color:#fff;background: #42adcf; height:30px;}
+
+
+
+input[type="radio"]  {position:absolute ;  }
+input[type=radio] + label {position: relative;}
+input[type=radio] + label:before {content: ''; display: inline-block; position: relative; top:6px;width:20px; height:20px; background: url(../images/bg_radio_off.png)no-repeat;}
+input[type=radio]:checked + label:before {content: ''; display: inline-block; position: relative; top:6px;width:20px; height:20px; background: url(../images/bg_radio_on.png)no-repeat; }
+input[type=radio]:checked + label:after {}
+/* input[type="ra"]:focus + label:before + .check,
+input:focus + label + .check {border:1px #808080 dashed;} */
+
+input[type=checkbox] {position:absolute; left:-2000%;  }
+input[type=checkbox] + label {position: relative; }
+input[type=checkbox] + label:before {content: ''; display: inline-block; position: relative; top:6px;width:20px; height:20px; border:1px solid #aaa; border-radius: 3px; background:#fff;  margin:0 4px 0 0 ; }
+input[type=checkbox]:checked + label:before {background:#ffdbf3; }
+input[type=checkbox]:checked + label:after {content: ''; position:absolute;  left:0; top:-3px; width:20px; height:20px; background:url(../images/bg_checkbox.png)no-repeat;}
+
+.switch {position: relative; width:60px; height:34px; display: inline-block;}
+.switch input {opacity: 0; width: 0; height: 0;}
+.switch .slider {position: absolute; left:0; top:0; right: 0; bottom: 0; background:#ccc; transition:0.4s; -webkit-transition:0.4s;}
+.switch .slider:before {content:''; position: absolute; left:7px; top:7px; width: 26px; height:20px; background:#658ffc; transition:all 0.4s; -webkit-transition:all 0.4s;}
+.switch input:checked +.slider {background:#f689d0;}
+.switch input:focus + .slider {box-shadow: 0 0 1px #2196f3;}
+.switch input:checked +.slider:before {transform:translateX(20px); -webkit-transform:translateX(20px); -ms-transform:translateX(20px)}
+
+.switch .slider.round {border-radius: 26px; }
+.switch .slider.round:before {border-radius: 26px;}
+
+/* 셀렉트박스 */
+.selectbox {position: relative; display: inline-block; vertical-align: middle;}
+.selectbox select { display: none; /*hide original SELECT element: */}
+.select-selected {background-color: DodgerBlue;}
+/* Style the arrow inside the select element: */
+.select-selected:after {position: absolute;content: "";top: 14px;right: 10px;width: 0;height: 0;border: 6px solid transparent;border-color: #fff transparent transparent transparent;}
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {border-color: transparent transparent #fff transparent;top: 7px;}
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {color: #ffffff;padding: 8px 16px;border: 1px solid transparent;border-radius: 3px;border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;cursor: pointer;}
+/* Style items (options): */
+.select-items {position: absolute;background-color: DodgerBlue;top: 100%;left: 0;right: 0;z-index: 99;border-radius: 0 0 3px 3px;}
+/* Hide the items when the select box is closed: */
+.select-hide {display: none;}
+.select-items div:hover, .same-as-selected {background-color: rgba(0, 0, 0, 0.1);}
+
+/* 햄버거메뉴 */
+.container {display: inline-block;cursor: pointer;}
+.container .bar1, .container .bar2, .container .bar3 {width: 35px;height: 2px;background-color: #333;margin: 8px 0;transition: 0.4s;}
+.container.change .bar1 {-webkit-transform: rotate(-45deg) translate(-9px, 6px);transform: rotate(-45deg) translate(-7px, 6px);}
+.container.change .bar2 {opacity: 0;}
+.container.change .bar3 {-webkit-transform: rotate(45deg) translate(-8px, -8px);transform: rotate(45deg) translate(-8px, -8px);}
+
+.hamberger {display: inline-block;cursor: pointer;}
+.hamberger .bar1, .hamberger .bar2, .hamberger .bar3 {width: 35px;height: 2px;background-color: #333;margin: 8px 0;transition: 0.4s;}
+.hamberger:hover .bar1 {-webkit-transform: rotate(-45deg) translate(-9px, 6px);transform: rotate(-45deg) translate(-7px, 6px);}
+.hamberger:hover .bar2 {opacity: 0;}
+.hamberger:hover .bar3 {-webkit-transform: rotate(45deg) translate(-8px, -8px);transform: rotate(45deg) translate(-8px, -8px);}
+
+.accordion {background: #eee;color: #444;cursor: pointer;padding: 18px;width: 100%;border-bottom:1px solid #aaa;text-align: left;transition: 0.4s;}
+.active, .accordion:hover {background-color: #ccc;}
+.panel {padding: 0 18px;background-color: white; max-height:0; line-height:22px; overflow: hidden;transition: max-height 0.2s ease-out;}
+.accordion:after {content: '\02795'; /* Unicode character for "plus" sign (+) */font-size: 13px;color: #777;float: right;margin-left: 5px;border:none}
+.active:after {content: "\2796"; /* Unicode character for "minus" sign (-) */}
+
+.faq_list {position:relative; width:100%;}
+.faq_list ul {position:relative; border-top:1px solid; margin-top:20px;}
+.faq_list ul li {position:relative; border-bottom:1px solid #e1e1e1;}
+.faq_list .question {position:relative; font-size:20px; color:#333; padding:20px 20px; cursor:pointer; outline:none;}
+.faq_list .question .ico_q {font-style:normal; font-weight:700; color:#0078d4; display:inline-block; margin-right:10px;}
+.faq_list .answer {display:none;line-height:28px; padding:25px 50px; background:#f8f8f8; border-top:1px solid #e1e1e1;}
+.faq_list .question.active + .answer {display:block}
+.faq_list ul li .question::after {
+	background: url('/resources/images/ico_accordion_arr.png') no-repeat;
+	width:22px;
+	height:11px;
+	background-size:20px auto;
+	content:"";
+	position:absolute;
+	top:50%;
+	transform:translateY(-50%);
+	right:20px;
+}
+
+.img_overlay_type1 {flex:1; position:relative; overflow:hidden; border:1px solid #aaa; border-radius:5px; justify-content: center; margin:5px; height:150px;}
+.img_overlay_type1 img {position:absolute; left:50%; top:50%; transform: translate(-50%,-50%);width:101%; height:auto;  }
+.img_overlay_type1:hover p {position: absolute;width:100%; height:auto; z-index:99; top:0; left:0; right:0; bottom:0; background-color: rgba(0,0,0,0.5); transition:0.5s ease; }
+.img_overlay_type1:hover p span {color:#fff; display: inline-block; position:absolute; top:50%; left:50%; transform: translate(-50%, -50%); text-align:center;}
+
+.quick_menu {position:fixed;; right:20px; bottom:25px;}
+.quick_menu ul li {text-align:right; }
+.quick_menu ul li>.orange {background:#edae4e}
+.quick_menu ul li+li { position:relative; margin-top:5px; }
+.quick_menu ul a {display: inline-block; overflow: hidden; position: relative; right:0px; width:50px; height:50px; border-radius:50px; box-shadow: 0px 0px 9px -3px rgba(0, 0, 0, 0.5); background:#fff; transition:0.5s;}
+.quick_menu ul a:hover {width:150px; height:50px; }
+.quick_menu ul li .img1 {position:absolute; width:34px; height:34px; left:50%; top:50%; transform: translate(-50%, -50%); background: url(../images/img_blog.png)no-repeat;}
+.quick_menu ul li .img2 {position:absolute; width:34px; height:34px; left:50%; top:50%; transform: translate(-50%, -50%); background: url(../images/img_facebook.png)no-repeat;}
+.quick_menu ul li .img3 {position:absolute; width:34px; height:34px; left:50%; top:50%; transform: translate(-50%, -50%); background: url(../images/img_instagram.png)no-repeat;}
+.quick_menu ul li .img4 {position:absolute; width:34px; height:34px; left:50%; top:50%; transform: translate(-50%, -50%); background-image: url(../images/img_tel.png);}
+.quick_menu ul a:hover .img1_over {position:absolute; width:114px; height:34px; left:50%; top:50%; transform: translate(-50%, -50%); background: url(../images/img_blog_over.png)no-repeat;}
+.quick_menu ul a:hover .img2_over {position:absolute; width:114px; height:34px; left:50%; top:50%; transform: translate(-50%, -50%); background: url(../images/img_facebook_over.png)no-repeat;}
+.quick_menu ul a:hover .img3_over {position:absolute; width:114px; height:34px; left:50%; top:50%; transform: translate(-50%, -50%); background: url(../images/img_instagram_over.png)no-repeat;}
+.quick_menu ul a:hover .img4_over {position:absolute; width:114px; height:34px; left:50%; top:50%; transform: translate(-50%, -50%); background: url(../images/img_blog_over.png)no-repeat;}
+.quick_menu ul .hover_none a:hover {width:50px; height:50px;}
+.quick_menu ul li a:hover .img1,
+.quick_menu ul li a:hover .img2,
+.quick_menu ul li a:hover .img3 {display:none; }
