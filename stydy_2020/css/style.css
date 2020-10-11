@@ -1,0 +1,97 @@
+@charset "utf-8";
+input[type="checkbox"] {position: absolute; left: -5000%; }
+input[type="checkbox"] + label {height: 36px; width:36px; line-height: 36px; }
+input[type="checkbox"] + label:before { content:''; display:inline-block; width: 12px; height: 12px; background-image: url(../img/icon.png) no-repeat -49px -60px; }
+input[type="checkbox"]:checked + label:before {content:''; display:inline-block; background-image:url(../img/icon.png) no-repeat -66px -60px;}
+input[type="checkbox"]:focus + label:before {content:'' display:inline-block; border:1px solid black; box-sizing: border-box;}
+
+input[type="radio"] {position: absolute; left:-5000%;}
+input[type="radio"] + label {width:13px; height:13px; line-height: 36px;}
+input[type="radio"] + label:before {content:''; display:inline-block; width:13px; height:13px; background-image: url(../img/icon.png) no-repeat -2px -60px;}
+input[type="radio"]:checked + label:before {content:''; display:inline-block;  background-image: url(../img/icon.png) no-repeat -20px -60px;}
+
+select {height: 40px; background-image: url(../img/btn_select.png) no-repeat right; -webkit-appearance:none; padding-right:40px; }
+select::-ms-expand{ opacity: 0;}
+select[multiple] {background: none; padding: none; height: none;}
+
+table {width:100%; border:1px solid #000; }
+table caption:before {content:''; display:block; position: relative; height:2px; background:blue;}
+table th, table td {border:1px solid red; padding: 5px 10px;}
+table th {background: lightgray; vertical-align: middle;}
+table th:first-child,table td:first-child {border-top:none;}
+
+.flex_lay01 {display: flex; border:1px solid red;}
+.flex_lay01 li {flex:1; background:yellow; margin:0 10px; border:1px solid gray;}
+
+.flex_lay02 {display: flex; justify-content: center; height: 500px;}
+.flex_lay02 li {width: 200px; background: green; height: 200px; margin: auto;}
+
+/* 테이블 헤더 고정하기 ie엣지 이상 */
+.fix_header {width:500px; height: 100px; overflow: auto; }
+.fix_header caption {font-size: 0; color: transparent;}
+.fix_header table {border-collapse: collapse; border-spacing: 0; }
+.fix_header th,td {border:1px solid #000; padding: 10px;}
+.fix_header thead th {position: sticky; top:0; background: skyblue; font-size: 12px;}
+.fix_header thead th:after,
+.fix_header thead th:before {content: ''; position: absolute; left: 0; width: 100%; height: 1px; background: #000;}
+.fix_header thead th:after {top:-1px;}
+.fix_header thead th:before {bottom: -1px;}
+
+/*show/hide*/
+.show_hide {display: relative; }
+/* .show_hide:after {content: ''; display: block; clear: both;} */
+.show_hide .btn_show {width: 100px; height: 50px; background: pink; float:left;}
+.show_hide ul {display: none; float:left; width: 100px; background: green;}
+.show_hide:active ul {display: block; position: absolute; left:100px; width: 90px; }
+
+/* 레이어팝업열기 */
+.open_layer .btn_open {display: inline-block; width: 100px; height: 30px; background: skyblue; line-height: 30px; text-align: center; color: #fff;}
+.open_layer .pop_layer {position: absolute; left: 50%; top:50%; z-index: -1; transform: translate(-50%, -50%); width: 500px; height: 500px; box-shadow: 3 3 10px rega(0 0 0 0.5);
+  background: pink; opacity: 0;}
+.open_layer .dimm {position: absolute; left: 0; top:0; z-index: -1;width: 100%; height: 100%; background:red; opacity: 0;}
+.open_layer .pop_layer:target {opacity: 1; z-index: 3}
+.open_layer .pop_layer:target + .dimm {opacity: 1; z-index: 2}
+
+/* 체크박스토글버튼 */
+input.chk_toggle {position: absolute; left:-3000%;}
+input.chk_toggle + label{ overflow: hidden;display:inline-block; position:relative; width:200px; height:30px; background: #9bb7ff;  border-radius: 30px; transition: all 0.5s;}
+input.chk_toggle + label:before {content: 'on'; display: inline-block; position:absolute; top:2px; right:2px; width:26px; height: 26px; border-radius: 30px; background: blue;
+  text-indent: -165px; line-height: 26px; transition: all 0.5s}
+input.chk_toggle:checked + label {background: #ff9bcf;}
+input.chk_toggle:checked + label::before {position: absolute; right:172px; background-color: #ff0f8b; }
+input.chk_toggle + label:after{content: 'off'; position: absolute; right:-20px; top:2px color:#fff; line-height: 26px;}
+input.chk_toggle:checked + label:after {right:15px; transition: all 0.5s}
+input.chk_toggle:focus + label::before {border:none;}
+
+/* 햄버거메뉴 */
+.total {display:inline-block; position:relative;; left:50%; top:50%; width:60px; height:50px; transform: translate(-50%, -50%);  }
+.total span {display: block; position: absolute; top:50%; width:100%; height:6px; background:rgba(225, 176, 255, 1); color: transparent; transform: translate(0, -50%); transition: all 0.5s;}
+.total span:before,
+.total span:after {content: ''; position:absolute; left:0; top:0; width: 100%; height:6px;  background:rgba(225, 176, 255, 1); transition: all 0.5s;}
+.total span:before {top:-18px; transition: all 0.5s;}
+.total span:after {top:18px; transition: all 0.5s;}
+.total.on span {background: rgba(225, 254, 110, 0); }
+.total.on span:before {top:0; transform: rotate(45deg);}
+.total.on span:after {top:0; transform: rotate(-45deg);}
+
+/* 텝메뉴 */
+.tab_type1 ul {display: flex; border-bottom:1px solid #29c700; height:31px}
+.tab_type1 li {flex:1;}
+.tab_type1 li:first-child {border-left:1px solid #999;}
+.tab_type1 li a {display: block; height:30px; border:1px solid #999; border-left:none; border-bottom:none; line-height: 30px; text-align:center;}
+.tab_type1 li a.on {position:relative; height:29px; border-color:#29c700; border-top:2px solid #29c700; border-bottom:1px solid #fff; line-height:28px;}
+.tab_type1 li a.on:before {content: ''; display: block; position:absolute; top:-2px; left:-1px; width: 1px; height:100%; border-top:2px solid #29c700;background: #29c700; }
+
+
+
+
+
+
+
+
+
+
+/*.login li input[type="checkbox"] {position:absolute; left:-3000%;}
+.login li input[type="checkbox"] + label {height:36px; line-height: 36px;}
+.login li input[type="checkbox"] + label:before {content: ''; display:inline-block; margin:0 10px 0 0; vertical-align:-6px; width: 18px; height:18px; border:1px solid #111; background: #666;}
+.login li input[type="checkbox"] :checked + label:before { background: url(../img/checkedbox.png) no-repeat center #666; }*/
