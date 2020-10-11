@@ -55,8 +55,13 @@ button {
     top: 0;
     left: -350px;
     position: fixed;
+    transition: 0.3s;
 }
 
+.page-main > aside.open {
+  left: 0px;
+
+}
 .page-main > aside ul {
     margin: 0;
     padding: 0;
@@ -117,5 +122,3 @@ button {
 .clearfix:after {
     clear: both;
 }
-
-

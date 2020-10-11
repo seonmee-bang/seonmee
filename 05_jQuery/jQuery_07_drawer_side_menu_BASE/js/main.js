@@ -3,8 +3,17 @@ $(function(){
   var $aside = $('aside'),
       $button = $aside.find('button'),
       $duration = 300;
+
+      console.log($button.find('img').attr('src'));
   $button.click(function(){
-    $aside.stop().animate({left:'0px'},$duration);
+    $aside.toggleClass('open');
+    if($aside.hasClass('open')){
+      //$aside.stop().animate({left:'0px'},$duration);
+      $button.find('img').attr('src','img/btn_close.png')
+    }else{
+      //$aside.stop().animate({left:'-350px'},$duration);
+      $button.find('img').attr('src','img/btn_open.png')
+    }
   });
 });
 
