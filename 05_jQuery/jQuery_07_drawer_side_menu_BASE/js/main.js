@@ -18,24 +18,6 @@ $(function(){
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 $(function(){
   var $aside = $('aside'),
